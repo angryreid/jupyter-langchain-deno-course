@@ -5,8 +5,8 @@
   "scripts": {
     "prepare-kong-faiss": "ts-node prepare-kong-faiss.ts",
     "load-kong-faiss": "ts-node load-kong-faiss.ts",
-    "multiQueryRetriever": "ts-node multiQueryRetriever.ts",
-    "LLMChainExtractor": "ts-node LLMChainExtractor.ts",
+    "multi-query-retriever": "ts-node multi-query-retriever.ts",
+    "llm-chain-extractor": "ts-node llm-chain-extractor.ts",
     "ScoreThresholdRetriever": "ts-node ScoreThresholdRetriever.ts",
     "prepare-qiu": "ts-node ./rag/prepare-qiu.ts",
     "rag-2": "ts-node ./rag/index.ts",
