@@ -22,7 +22,7 @@ const run = async () => {
     const embeddings = new OpenAIEmbeddings()
     const vectorStore = await FaissStore.fromDocuments(splitDocs, embeddings)
 
-    await vectorStore.save(path.join(baseDir, '../../dp/qiu'))
+    await vectorStore.save(path.join(baseDir, '../../db/qiu'))
 
     console.log('done')
 }
