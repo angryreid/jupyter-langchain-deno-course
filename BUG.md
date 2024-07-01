@@ -1,6 +1,6 @@
 # BUG
 
-1. ReadableStream is not defined
+## ReadableStream is not defined
 
 ```sh
 class IterableReadableStream extends ReadableStream {
@@ -8,4 +8,8 @@ class IterableReadableStream extends ReadableStream {
 ReferenceError: ReadableStream is not defined
 ```
 
-**Fix** due to node js version is too low.
+**Fix** Due to node js version is too low.
+
+## ReferenceError: fetch is not defined
+
+**Fix** Due to node js version is too low. Fetch API is newly support in Node *18*
