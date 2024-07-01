@@ -92,19 +92,23 @@ export async function getRagChain(): Promise<Runnable> {
   const model = new ChatOpenAI();
   const rephraseChain = await getRephraseChain();
 
+  const assignedStandaloneQuestion = {
+    standalone_question: rephraseChain
+  }
+
+  const assignedContext = {
+    context: contextRetrieverChain
+  }
+
   const ragChain = RunnableSequence.from([
-    RunnablePassthrough.assign({
-      standalone_question: rephraseChain,
-    }) as any,
-    RunnablePassthrough.assign({
-      context: contextRetrieverChain,
-    }) as any,
+    RunnablePassthrough.assign(assignedStandaloneQuestion),
+    RunnablePassthrough.assign(assignedContext),
     prompt,
     model,
-    new StringOutputParser(),
-  ]);
+    new StringOutputParser()
+  ] as any);
 
-  const chatHistoryDir = path.join(__dirname, '../../chat_data');
+  const chatHistoryDir = path.join(__dirname, '../../data/chat');
 
   const ragChainWithHistory = new RunnableWithMessageHistory({
     runnable: ragChain,
@@ -122,8 +126,8 @@ async function run() {
 
   const res = await ragChain.invoke(
     {
-      //   question: '什么是球状闪电？',
-      question: '这个现象在文中有什么故事',
+        question: '什么是球状闪电？',
+      // question: '这个现象在文中有什么故事',
     },
     {
       configurable: { sessionId: 'test-history' },
@@ -133,6 +137,6 @@ async function run() {
   console.log(res);
 }
 
-// run();
+run();
 
 // testRephraseChain();

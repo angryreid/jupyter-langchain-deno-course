@@ -9,7 +9,7 @@
     "llm-chain-extractor": "ts-node llm-chain-extractor.ts",
     "score-threshold-retriever": "ts-node score-threshold-retriever.ts",
     "prepare-qiu": "ts-node ./rag/prepare-qiu.ts",
-    "rag-2": "ts-node ./rag/index.ts",
+    "rag-chain": "ts-node ./rag/index.ts",
     "rag-server": "ts-node ./rag/server.ts",
     "rag-client": "ts-node ./rag/client.ts"
   },
