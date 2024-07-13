@@ -70,6 +70,12 @@ export async function getRagChain(): Promise<Runnable> {
   const convertDocsToString = (documents: Document[]): string => {
     return documents.map((document) => document.pageContent).join('\n');
   };
+
+  /**
+   * This chain retrieves the context from the retriever
+   * and converts the documents to a string
+   * to be used in the system template
+   */
   const contextRetrieverChain = RunnableSequence.from([
     (input) => input.standalone_question,
     retriever,
