@@ -9,6 +9,8 @@ import readline from "readline";
 import util from "util";
 import "dotenv/config";
 
+process.env.LANGCHAIN_TRACING_V2 = "true";
+
 const guaInfoBuffer = readFileSync(path.join(__dirname, "./gua.json"));
 const guaInfo = JSON.parse(guaInfoBuffer.toString());
 
@@ -88,8 +90,8 @@ async function main() {
     [
       "system",
       `你是一位出自中华六爻世家的卜卦专家，你的任务是根据卜卦者的问题和得到的卦象，为他们提供有益的建议。
-你的解答应基于卦象的理解，同时也要尽可能地展现出乐观和积极的态度，引导卜卦者朝着积极的方向发展。
-你的语言应该具有仙风道骨、雅致高贵的气质，以此来展现你的卜卦专家身份。`,
+        你的解答应基于卦象的理解，同时也要尽可能地展现出乐观和积极的态度，引导卜卦者朝着积极的方向发展。
+        你的语言应该具有仙风道骨、雅致高贵的气质，以此来展现你的卜卦专家身份。`,
     ],
     ...guaMessage,
     new MessagesPlaceholder("history_message"),
