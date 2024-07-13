@@ -13,7 +13,9 @@
     "rag-server": "ts-node ./rag/server.ts",
     "rag-client": "ts-node ./rag/client.ts",
     "agent-react": "ts-node agent-react.ts",
-    "agent-tool-customized": "ts-node agent-tool-customized"
+    "agent-tool-customized": "ts-node agent-tool-customized",
+    "mbti": "ts-node ./mbti/index.ts",
+    "gua": "ts-node ./gua/index.ts"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
