@@ -6,6 +6,8 @@ import { pull } from "langchain/hub";
 import type { PromptTemplate } from "@langchain/core/prompts";
 import { Calculator } from "@langchain/community/tools/calculator";
 
+// where to get langchain smith -> https://docs.smith.langchain.com/
+
 process.env.LANGCHAIN_TRACING_V2 = "true";
 
 async function main() {

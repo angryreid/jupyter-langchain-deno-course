@@ -8,4 +8,4 @@ AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=text-embedding-3-large
 
 # Lang Smith
 LANGCHAIN_TRACING_V2=true  
-LANGCHAIN_API_KEY=<your-api-key>
+LANGCHAIN_API_KEY=<your-api-key> # need to 'export LANGCHAIN_API_KEY=<your-api-key>'
