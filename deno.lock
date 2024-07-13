@@ -4,7 +4,10 @@
     "specifiers": {
       "npm:@langchain/core@0.1.48": "npm:@langchain/core@0.1.48_zod@3.23.8",
       "npm:@langchain/openai@0.0.22": "npm:@langchain/openai@0.0.22_zod@3.23.8_openai@4.51.0",
-      "npm:langchain@0.1.29": "npm:langchain@0.1.29_@langchain+core@0.1.48__langchain@0.1.29__zod@3.23.8_zod@3.23.8"
+      "npm:langchain@0.1.29": "npm:langchain@0.1.29_@langchain+core@0.1.48__langchain@0.1.29__zod@3.23.8_zod@3.23.8",
+      "npm:openai": "npm:openai@4.51.0",
+      "npm:zod": "npm:zod@3.23.8",
+      "npm:zod-to-json-schema": "npm:zod-to-json-schema@3.23.0_zod@3.23.8"
     },
     "npm": {
       "@anthropic-ai/sdk@0.9.1": {
