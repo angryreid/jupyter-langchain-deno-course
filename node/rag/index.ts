@@ -39,7 +39,7 @@ async function getRephraseChain() {
   const rephraseChain = RunnableSequence.from([
     rephraseChainPrompt,
     new ChatOpenAI({
-      temperature: 0.4,
+      temperature: 0.4, // the more lower the temperature, the more deterministic the output
     }),
     new StringOutputParser(),
   ]);
